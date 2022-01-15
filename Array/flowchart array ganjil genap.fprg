@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Acer"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-11-23 07:34:46 PM"/>
+        <attribute name="created" value="QWNlcjtMQVBUT1AtVDdVSjkwRjA7MjAyMS0xMS0yMzswNToxNToyNCBQTTsyNjgy"/>
+        <attribute name="edited" value="QWNlcjtMQVBUT1AtVDdVSjkwRjA7MjAyMS0xMS0yMzswNzozNDo0NiBQTTsyOzI3OTg="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Mendeklarasi variabel nilai sebagai array dan i , genap, ganjil sebagai integer"/>
+            <declare name="nilai" type="Integer" array="True" size="10"/>
+            <declare name="i, genap, ganjil" type="Integer" array="False" size=""/>
+            <comment text="Mendeklarasi setiap kamar dari variabel array nilai"/>
+            <assign variable="nilai[0]" expression="1"/>
+            <assign variable="nilai[1]" expression="2"/>
+            <assign variable="nilai[2]" expression="3"/>
+            <assign variable="nilai[3]" expression="4"/>
+            <assign variable="nilai[4]" expression="5"/>
+            <assign variable="nilai[5]" expression="6"/>
+            <assign variable="nilai[6]" expression="7"/>
+            <assign variable="nilai[7]" expression="8"/>
+            <assign variable="nilai[8]" expression="9"/>
+            <assign variable="nilai[9]" expression="10"/>
+            <comment text="loop dimulai dari 0 sampai 9"/>
+            <for variable="i" start="0" end="9" direction="inc" step="1">
+                <comment text="Menentukan ganjil genap dari array yang di loop&#13;&#10;apabila modulo 2 nya tidak bersisa maka genap&#13;&#10;kalau tidak maka ganjil"/>
+                <if expression="nilai[i]% 2 == 0">
+                    <then>
+                        <comment text="Kalau array nya bernilai genap maka akan dibagi 2"/>
+                        <output expression="nilai[i]" newline="False"/>
+                        <output expression="&quot; adalah genap dan &quot;" newline="False"/>
+                        <assign variable="genap" expression="nilai[i] / 2"/>
+                        <output expression="&quot;nilai akhir adalah : &quot;" newline="False"/>
+                        <output expression="genap" newline="True"/>
+                    </then>
+                    <else>
+                        <comment text="kalau nilai array nya ganjil maka akan dikali 3"/>
+                        <output expression="nilai[i]" newline="False"/>
+                        <output expression="&quot; adalah genap dan &quot;" newline="False"/>
+                        <assign variable="ganjil" expression="nilai[i]*3"/>
+                        <output expression="&quot;nilai akhir adalah : &quot;" newline="False"/>
+                        <output expression="ganjil" newline="True"/>
+                    </else>
+                </if>
+            </for>
+        </body>
+    </function>
+</flowgorithm>
